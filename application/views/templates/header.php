@@ -4,7 +4,7 @@ $dir = "";
 if($_SERVER['SERVER_NAME'] == "sitedozero.com.br"){
     $dir = "/";
 }else if($_SERVER['SERVER_NAME'] == "localhost"){
-    $dir = "/local/codedota/";
+    $dir = "/codeIgniter-dota/";
 }
 
 ?>
