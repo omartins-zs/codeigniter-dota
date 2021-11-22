@@ -5,7 +5,16 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->model('herois_model');
+
 		$dados['titulo'] = "Home - CI Dota";
+		$dados['herois'] = $this->herois_model->listarHerois();
+
+		// Verificar se a variavel esta chegando
+		echo "<pre>";
+		print_r($dados);
+		echo "</pre>";
+		exit;
 		
 		$this->load->view('templates/header', $dados);
 		$this->load->view('templates/nav-top', $dados);
