@@ -31,11 +31,11 @@
                     <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar" aria-label="Search">
                     <button class="btn btn-danger" type="submit">Pesquisar</button>
                 </form>
-                <?php if($this->session->userdata("usuario_logado")) : ?>
+                <?php if ($this->session->userdata("usuario_logado")) : ?>
                 <a href="usuarios/logout" class="btn btn-defalut" style="color: #86817D;">Sair</a>
                 <?php else : ?>
-                <a href="usuarios/login" class="btn btn-defalut" style="color: #86817D;">Login</a> <a
-                    href="usuarios/cadastrar" class="btn btn-defalut" style="color: #86817D;">Cadastrar</a>
+                <a href="usuarios/login" class="btn btn-defalut" style="color: #86817D;">Login</a>
+                <a href="cadastrar-usuarios" class="btn btn-defalut" style="color: #86817D;">Cadastrar</a>
                 <?php endif ?>
             </div>
         </div>
