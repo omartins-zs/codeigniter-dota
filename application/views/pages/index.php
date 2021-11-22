@@ -51,7 +51,7 @@
                             <div class="card-body">
                                 <h5 class="card-title"><?= $heroi['nome'] ?></h5>
                                 <p class="card-text"><?= character_limiter($heroi['biografia'], 100) ?></p>
-                                <a href="#" class="btn btn-danger">Go somewhere</a>
+                                <a href="#" class="btn btn-danger">Visualizar Herói</a>
                             </div>
                         </div>
                     </div>
