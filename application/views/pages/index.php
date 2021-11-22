@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: lucas genari
@@ -19,11 +20,11 @@
 
             <div class="col-md-12" style="margin-top: 35px; color: #86817D">
 
-                <?php if($this->session->flashdata("success")) : ?>
+                <?php if ($this->session->flashdata("success")) : ?>
                 <p class="alert alert-success"><?= $this->session->flashdata("success") ?></p>
                 <?php endif ?>
 
-                <?php if($this->session->flashdata("danger")) : ?>
+                <?php if ($this->session->flashdata("danger")) : ?>
                 <p class="alert alert-danger"><?= $this->session->flashdata("danger") ?></p>
                 <?php endif ?>
 
@@ -42,7 +43,19 @@
             <div class="col-md-12">
                 <h1 style="text-align: center; margin-bottom: 30px; color: #86817D">Últimos Personagens</h1>
                 <div class="row clearfix" style="text-align: justify">
-
+                    <?php foreach ($herois as $heroi) : ?>
+                    <div class="col-md-3" style="margin-bottom: 20px;">
+                        <div class="card personagem" style="background-color: #1B1D1D; color: #86817D">
+                            <img class="card-img-top" src="assets/images/herois/<?= $heroi['nome_imagem'] ?>"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $heroi['nome'] ?></h5>
+                                <p class="card-text"><?= character_limiter($heroi['biografia'], 100) ?></p>
+                                <a href="#" class="btn btn-danger">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
