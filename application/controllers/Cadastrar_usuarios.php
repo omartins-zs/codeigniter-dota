@@ -21,7 +21,7 @@ class Cadastrar_usuarios extends CI_Controller
 			"nome" => $this->input->post("nome"),
 			"email" => $this->input->post("email"),
 			"username" => $this->input->post("username"),
-			"senha" => $this->input->post("senha")
+			"senha" => md5($this->input->post("senha"))
 		);
 		$this->load->model('usuarios_model');
 		$this->usuarios_model->cadastra_usuario($usuario);
