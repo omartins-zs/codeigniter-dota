@@ -18,16 +18,16 @@
             <div class="col-md-12" style="margin-top: 35px; color: #86817D">
 
                 <?php if($this->session->flashdata("success")) : ?>
-                    <p class="alert alert-success"><?= $this->session->flashdata("success") ?></p>
+                <p class="alert alert-success"><?= $this->session->flashdata("success") ?></p>
                 <?php endif ?>
 
                 <?php if($this->session->flashdata("danger")) : ?>
-                    <p class="alert alert-danger"><?= $this->session->flashdata("danger") ?></p>
+                <p class="alert alert-danger"><?= $this->session->flashdata("danger") ?></p>
                 <?php endif ?>
 
                 <div class="jumbotron" style="background-color: #1B1D1D;">
                     <h2>Cadastro de Usuários</h2>
-                    <form action="usuarios/novo" method="post">
+                    <form action="cadastrar_usuarios/novo" method="post">
                         <div class="form-group">
                             <label for="nome">Nome</label>
                             <input type="text" name="nome" id="nome" class="form-control">
