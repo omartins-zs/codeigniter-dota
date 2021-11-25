@@ -11,10 +11,10 @@ class Home extends CI_Controller {
 		$dados['herois'] = $this->herois_model->listarHerois();
 
 		// Verificar se a variavel esta chegando
-		echo "<pre>";
-		print_r($dados);
-		echo "</pre>";
-		exit;
+		// echo "<pre>";
+		// print_r($dados);
+		// echo "</pre>";
+		// exit;
 		
 		$this->load->view('templates/header', $dados);
 		$this->load->view('templates/nav-top', $dados);

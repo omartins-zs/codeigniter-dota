@@ -25,5 +25,7 @@ class Cadastrar_usuarios extends CI_Controller
 		);
 		$this->load->model('usuarios_model');
 		$this->usuarios_model->cadastra_usuario($usuario);
+		$this->session->set_flashdata("success", "Usuario cadastrado com sucesso!!");
+		redirect('cadastrar-usuarios');
 	}
 }
