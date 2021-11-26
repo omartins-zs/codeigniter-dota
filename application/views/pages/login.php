@@ -18,16 +18,16 @@
             <div class="col-md-12" style="margin-top: 35px; color: #86817D">
 
                 <?php if($this->session->flashdata("success")) : ?>
-                    <p class="alert alert-success"><?= $this->session->flashdata("success") ?></p>
+                <p class="alert alert-success"><?= $this->session->flashdata("success") ?></p>
                 <?php endif ?>
 
                 <?php if($this->session->flashdata("danger")) : ?>
-                    <p class="alert alert-danger"><?= $this->session->flashdata("danger") ?></p>
+                <p class="alert alert-danger"><?= $this->session->flashdata("danger") ?></p>
                 <?php endif ?>
 
                 <div class="jumbotron" style="background-color: #1B1D1D;">
                     <h2>Entrar</h2>
-                    <form action="usuarios/logar_usuarios" method="post">
+                    <form action="usuarios/logar" method="post">
 
                         <div class="form-group">
                             <label for="username">Nome de Usuário</label>
