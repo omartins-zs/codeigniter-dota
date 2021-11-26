@@ -31,12 +31,12 @@
 
                         <div class="form-group">
                             <label for="username">Nome de Usuário</label>
-                            <input type="text" name="username" id="username" class="form-control">
+                            <input required type="text" name="username" id="username" class="form-control">
                         </div>
 
                         <div class="form-group">
                             <label for="senha">Senha</label>
-                            <input type="password" name="senha" id="senha" class="form-control">
+                            <input required type="password" name="senha" id="senha" class="form-control">
                         </div>
 
                         <button type="submit" class="btn btn-danger">Login</button>
