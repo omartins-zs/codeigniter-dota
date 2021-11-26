@@ -27,7 +27,7 @@
 
                 <div class="jumbotron" style="background-color: #1B1D1D;">
                     <h2>Entrar</h2>
-                    <form action="usuarios/logar" method="post">
+                    <form action="login/logar" method="post">
 
                         <div class="form-group">
                             <label for="username">Nome de Usuário</label>
