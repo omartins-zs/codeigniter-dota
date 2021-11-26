@@ -17,9 +17,11 @@ class Login extends CI_Controller
 
 	public function logar()
 	{
+		$this->load->model('usuarios_model');
+
 		$username = $this->input->post("username");
 		$senha = md5($this->input->post("senha"));
-		$usuario = $this->model_usuarios->logarUsuarios($username, $senha);
+		$usuario = $this->usuarios_model->logarUsuarios($username, $senha);
 		if ($usuario) {
 
 			$this->session->set_userdata('usuario_logado', $usuario);
