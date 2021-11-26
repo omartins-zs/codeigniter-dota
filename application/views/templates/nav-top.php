@@ -32,7 +32,7 @@
                     <button class="btn btn-danger" type="submit">Pesquisar</button>
                 </form>
                 <?php if ($this->session->userdata("usuario_logado")) : ?>
-                <a href="usuarios/logout" class="btn btn-defalut" style="color: #86817D;">Sair</a>
+                <a href="login/logout" class="btn btn-defalut" style="color: #86817D;">Sair</a>
                 <?php else : ?>
                 <a href="login" class="btn btn-defalut" style="color: #86817D;">Login</a>
                 <a href="cadastrar-usuarios" class="btn btn-defalut" style="color: #86817D;">Cadastrar</a>

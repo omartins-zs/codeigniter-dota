@@ -32,4 +32,10 @@ class Login extends CI_Controller
 			redirect('login');
 		}
 	}
+	public function logout()
+	{
+		$this->session->unset_userdata("usuario_logado");
+		$this->session->set_flashdata('success', "Deslogado com sucesso!!");
+		redirect('/');
+	}
 }
