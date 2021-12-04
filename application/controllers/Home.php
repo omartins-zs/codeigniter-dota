@@ -8,7 +8,7 @@ class Home extends CI_Controller {
 		$this->load->model('herois_model');
 
 		$dados['titulo'] = "Home - CI Dota";
-		$dados['herois'] = $this->herois_model->listarHerois();
+		$dados['herois'] = $this->herois_model->destaques();
 
 		// Verificar se a variavel esta chegando
 		// echo "<pre>";
