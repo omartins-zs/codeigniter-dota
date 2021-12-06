@@ -24,7 +24,8 @@ class Herois extends CI_Controller
 		$this->load->view('templates/js', $dados);
 	}
 
-	public function formulario(){
+	public function formulario()
+	{
 		$dados['titulo'] = "Herois - CI Dota";
 		$dados['categorias'] = $this->categorias->listarCategorias();
 
@@ -33,5 +34,16 @@ class Herois extends CI_Controller
 		$this->load->view('pages/formulario_herois', $dados);
 		$this->load->view('templates/footer', $dados);
 		$this->load->view('templates/js', $dados);
+	}
+
+	public function novo()
+	{
+		if ($this->herois_model->cadastrar_herois($_POST)) {
+			$this->session->set_flashdata('success', "Heroi cadastrado com sucesso!");
+			redirect('herois');
+		} else {
+			$this->session->set_flashdata('danger', "Houve um erro ao tentar cadastar heroi!");
+			redirect('formulario');
+		}
 	}
 }

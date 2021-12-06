@@ -10,14 +10,6 @@
             <p class="descricao-contato">Formulário de Cadastro de Heróis.</p>
         </div>
 
-        <?php if($this->session->flashdata("success")) : ?>
-        <p class="alert alert-success"><?= $this->session->flashdata("success") ?></p>
-        <?php endif ?>
-
-        <?php if($this->session->flashdata("danger")) : ?>
-        <p class="alert alert-danger"><?= $this->session->flashdata("danger") ?></p>
-        <?php endif ?>
-
         <div class="heroi-page">
             <div class="jumbotron" style="background-color: #1B1D1D;">
                 <?= form_open_multipart('herois/novo') ?>

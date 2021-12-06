@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: lucas genari
- * Date: 29/08/2018
- * Time: 11:58
- */
 ?>
 
 <section class="herois">
@@ -28,6 +22,14 @@
             </div>
             <hr class="contato-hr">
             <p class="descricao-contato">Listagem completa de heróis disponíveis no jogo.</p>
+
+            <?php if ($this->session->flashdata("success")) : ?>
+            <p class="alert alert-success"><?= $this->session->flashdata("success") ?></p>
+            <?php endif ?>
+
+            <?php if ($this->session->flashdata("danger")) : ?>
+            <p class="alert alert-danger"><?= $this->session->flashdata("danger") ?></p>
+            <?php endif ?>
         </div>
 
         <div class="heroi-page">
