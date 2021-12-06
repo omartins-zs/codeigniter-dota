@@ -9,6 +9,7 @@ class Herois extends CI_Controller
 		parent::__construct();
 
 		$this->load->model("herois_model");
+		$this->load->model("categorias_model", "categorias");
 	}
 
 	public function index()
@@ -19,6 +20,17 @@ class Herois extends CI_Controller
 		$this->load->view('templates/header', $dados);
 		$this->load->view('templates/nav-top', $dados);
 		$this->load->view('pages/herois', $dados);
+		$this->load->view('templates/footer', $dados);
+		$this->load->view('templates/js', $dados);
+	}
+
+	public function formulario(){
+		$dados['titulo'] = "Herois - CI Dota";
+		$dados['categorias'] = $this->categorias->listarCategorias();
+
+		$this->load->view('templates/header', $dados);
+		$this->load->view('templates/nav-top', $dados);
+		$this->load->view('pages/formulario_herois', $dados);
 		$this->load->view('templates/footer', $dados);
 		$this->load->view('templates/js', $dados);
 	}
