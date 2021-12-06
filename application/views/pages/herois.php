@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: lucas genari
@@ -18,7 +19,7 @@
                 <div class="col-md-6">
                     <h1>Heróis</h1>
                 </div>
-                <?php if($this->session->userdata("usuario_logado")) : ?>
+                <?php if ($this->session->userdata("usuario_logado")) : ?>
                 <div class="col-md-6">
                     <a href="herois/formulario"><button class="btn btn-danger" style="float: right">Cadastrar Novo
                             Herói</button></a>
@@ -31,8 +32,21 @@
 
         <div class="heroi-page">
             <div class="row clearfix">
+                <div class="row clearfix">
+                    <?php foreach ($herois as $heroi) :
 
+                        // Substituir nomes com espaços por traços -
+                        $novoNome = preg_replace('/[ -]+/', '-', $heroi['nome']);
+
+                    ?>
+
+                    <div class="col-md-2">
+                        <img src="assets/images/herois/<?= $heroi['nome_imagem'] ?>" alt="" style="width: 100%"><br>
+                        <a href="herois/visualizar/<?= $heroi['id'] . "/" . $novoNome ?>"><?= $heroi['nome'] ?></a>
+                    </div>
+                    <?php endforeach ?>
+                    <!-- COL 6 // COL 6 // COL 6 // COL 6 // COL 6 // COL 6 //  -->
+                </div>
             </div>
         </div>
-    </div>
 </section>
