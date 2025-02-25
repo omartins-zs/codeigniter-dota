@@ -1,9 +1,11 @@
 <?php
-$mysqli = new mysqli("db", "user", "password", "code_dota");
+$mysqli = new mysqli("db", "gabigol", "teste_admin", "projetinho");
 
 if ($mysqli->connect_error) {
     die("Falha na conexão: " . $mysqli->connect_error);
 } else {
-    echo "Conexão bem-sucedida!";
+    echo "Conexão bem-sucedida!<br>";
 }
+
+$mysqli->close();
 ?>
