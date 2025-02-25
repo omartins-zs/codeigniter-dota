@@ -13,7 +13,7 @@ if($_SERVER['SERVER_NAME'] == "sitedozero.com.br"){
 
 <head>
     <meta charset="UTF-8">
-    <base href="//<?=$_SERVER['SERVER_NAME'].$dir?> ">
+    <base href="<?= base_url() ?>">
     <title><?= $titulo ?></title>
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
